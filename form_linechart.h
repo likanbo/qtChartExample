@@ -28,7 +28,7 @@ public:
 private:
 
     QChart *createLineChart() const;
-    DataTable generateRandomData(int listCount, int valueMax, int valueCount) const;
+    //DataTable generateRandomData(int listCount, int valueMax, int valueCount) const;
 
 
     int m_listCount;

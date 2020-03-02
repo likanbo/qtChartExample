@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     form_barchart.cpp \
     form_linechart.cpp \
+    form_piechart.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -25,11 +26,13 @@ HEADERS += \
     constdefine.h \
     form_barchart.h \
     form_linechart.h \
+    form_piechart.h \
     mainwindow.h
 
 FORMS += \
     form_barchart.ui \
     form_linechart.ui \
+    form_piechart.ui \
     mainwindow.ui
 
 # Default rules for deployment.

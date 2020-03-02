@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QGridLayout>
 #include "form_linechart.h"
+#include "form_barchart.h"
+#include "form_piechart.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

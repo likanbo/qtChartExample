@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form_BarChart</class>
- <widget class="QWidget" name="Form_BarChart">
+ <class>Form_PieChart</class>
+ <widget class="QWidget" name="Form_PieChart">
   <property name="geometry">
    <rect>
     <x>0</x>

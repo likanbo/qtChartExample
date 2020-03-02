@@ -10,7 +10,7 @@ Form_LineChart::Form_LineChart(QWidget *parent) :
     m_listCount = 3;
     m_valueMax = 10;
     m_valueCount = 7;
-    m_dataTable = generateRandomData(m_listCount, m_valueMax, m_valueCount);
+    m_dataTable = ::generateRandomData(m_listCount, m_valueMax, m_valueCount);
 
     QChartView *chartView = nullptr;
 
@@ -44,35 +44,35 @@ Form_LineChart::~Form_LineChart()
     delete ui;
 }
 
-DataTable Form_LineChart::generateRandomData(int listCount, int valueMax, int valueCount) const
-{
-    DataTable dataTable;
+//DataTable Form_LineChart::generateRandomData(int listCount, int valueMax, int valueCount) const
+//{
+//    DataTable dataTable;
 
-    // generate random data
-    for (int i(0); i < listCount; i++) {
-        DataList dataList;
-        qreal yValue(0);
-        for (int j(0); j < valueCount; j++) {
-            yValue = yValue + QRandomGenerator::global()->bounded(valueMax / (qreal) valueCount);
-            QPointF value((j + QRandomGenerator::global()->generateDouble()) * ((qreal) m_valueMax / (qreal) valueCount),
-                          yValue);
-            QString label = "Slice " + QString::number(i) + ":" + QString::number(j);
-            dataList << Data(value, label);
-        }
-        QString lineTitle = "Line"+QString::number(i);
+//    // generate random data
+//    for (int i(0); i < listCount; i++) {
+//        DataList dataList;
+//        qreal yValue(0);
+//        for (int j(0); j < valueCount; j++) {
+//            yValue = yValue + QRandomGenerator::global()->bounded(valueMax / (qreal) valueCount);
+//            QPointF value((j + QRandomGenerator::global()->generateDouble()) * ((qreal) m_valueMax / (qreal) valueCount),
+//                          yValue);
+//            QString label = "Slice " + QString::number(i) + ":" + QString::number(j);
+//            dataList << Data(value, label);
+//        }
+//        QString lineTitle = "Line"+QString::number(i);
 
-        if(dataTable.contains(lineTitle))
-        {
-            dataTable[lineTitle] = dataList;
-        }
-        else
-        {
-            dataTable.insert(lineTitle,dataList);
-        }
-    }
+//        if(dataTable.contains(lineTitle))
+//        {
+//            dataTable[lineTitle] = dataList;
+//        }
+//        else
+//        {
+//            dataTable.insert(lineTitle,dataList);
+//        }
+//    }
 
-    return dataTable;
-}
+//    return dataTable;
+//}
 
 QChart *Form_LineChart::createLineChart() const
 {
